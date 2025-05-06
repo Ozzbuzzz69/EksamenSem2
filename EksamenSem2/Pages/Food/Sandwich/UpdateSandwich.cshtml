@@ -1,0 +1,40 @@
+﻿@page "{id:int}"
+@model EksamenProjekt2Sem.Pages.Food.Sandwich.UpdateSandwichModel
+@{
+}
+
+<h1>Opdater</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.Sandwich.Ingredients" class="control-label"></label>
+        <input asp-for="@Model.Sandwich.Ingredients" class="form-control" />
+        <span asp-validation-for="@Model.Sandwich.Ingredients" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Sandwich.InSeason" class="control-label"></label>
+        <input asp-for="@Model.Sandwich.InSeason" class="form-control" />
+        <span asp-validation-for="@Model.Sandwich.InSeason" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Sandwich.MeatType" class="control-label"></label>
+        <input asp-for="@Model.Sandwich.MeatType" class="form-control" />
+        <span asp-validation-for="@Model.Sandwich.MeatType" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Sandwich.Price" class="control-label"></label>
+        <input asp-for="@Model.Sandwich.Price" class="form-control" />
+        <span asp-validation-for="@Model.Sandwich.Price" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Sandwich.Category" class="control-label"></label>
+        <input asp-for="@Model.Sandwich.Category" class="form-control" />
+        <span asp-validation-for="@Model.Sandwich.Category" class="text-danger"></span>
+    </div>
+
+    <p>
+        <div class="form-group">
+            <input type="submit" value="Opdater" class="btn btn-primary" />
+        </div>
+    </p>
+</form>

@@ -1,0 +1,40 @@
+﻿@page
+@model EksamenProjekt2Sem.Pages.Food.WarmMeal.CreateWarmMealModel
+@{
+}
+
+<h1>Opret</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.WarmMeal.Ingredients" class="control-label"></label>
+        <input asp-for="@Model.WarmMeal.Ingredients" class="form-control" />
+        <span asp-validation-for="@Model.WarmMeal.Ingredients" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.WarmMeal.InSeason" class="control-label"></label>
+        <input asp-for="@Model.WarmMeal.InSeason" class="form-control" />
+        <span asp-validation-for="@Model.WarmMeal.InSeason" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.WarmMeal.MeatType" class="control-label"></label>
+        <input asp-for="@Model.WarmMeal.MeatType" class="form-control" />
+        <span asp-validation-for="@Model.WarmMeal.MeatType" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.WarmMeal.Price" class="control-label"></label>
+        <input asp-for="@Model.WarmMeal.Price" class="form-control" />
+        <span asp-validation-for="@Model.WarmMeal.Price" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.WarmMeal.MinPersonAmount" class="control-label"></label>
+        <input asp-for="@Model.WarmMeal.MinPersonAmount" class="form-control" />
+        <span asp-validation-for="@Model.WarmMeal.MinPersonAmount" class="text-danger"></span>
+    </div>
+
+    <p>
+        <div class="form-group">
+            <input type="submit" value="Opret" class="btn btn-primary" />
+        </div>
+    </p>
+</form>

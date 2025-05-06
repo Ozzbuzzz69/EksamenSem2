@@ -1,0 +1,28 @@
+﻿@page
+@model EksamenProjekt2Sem.Pages.Food.Sandwich.ReadAllSandwichesModel
+@{
+}
+
+<h1>Smørrebrød</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ingredienser</th>
+            <th>I sæson</th>
+            <th>Kødtype</th>
+            <th>Pris</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sandwich in Model.Sandwiches)
+        {
+            <tr>
+                <td>@sandwich.Ingredients</td>
+                <td>@sandwich.InSeason</td>
+                <td>@sandwich.MeatType</td>
+                <td>@sandwich.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>

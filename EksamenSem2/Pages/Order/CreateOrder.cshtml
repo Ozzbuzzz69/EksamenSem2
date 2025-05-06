@@ -1,0 +1,32 @@
+﻿@page
+@model EksamenProjekt2Sem.Pages.Order.CreateOrderModel
+@{
+    //Very incorrect implementation of the page, but it is a placeholder for the actual implementation.
+}
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.Order.Id" class="control-label"></label>
+        <input asp-for="@Model.Order.Id" class="form-control" />
+        <span asp-validation-for="@Model.Order.Id" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Order.User" class="control-label"></label>
+        <input asp-for="@Model.Order.User" class="form-control" />
+        <span asp-validation-for="@Model.Order.User" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Order.PickupTime" class="control-label"></label>
+        <input asp-for="@Model.Order.PickupTime" class="form-control" />
+        <span asp-validation-for="@Model.Order.PickupTime" class="text-danger"></span>
+    </div>
+    @{
+        /* More inputs should be added here */
+    }
+
+    <p>
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </p>
+</form>

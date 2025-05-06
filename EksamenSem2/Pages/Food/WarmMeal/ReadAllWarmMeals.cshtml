@@ -1,0 +1,30 @@
+﻿@page
+@model EksamenProjekt2Sem.Pages.Food.WarmMeal.ReadAllWarmMealsModel
+@{
+}
+
+<h1>Varme retter</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ingredienser</th>
+            <th>I sæson</th>
+            <th>Kødtype</th>
+            <th>Pris</th>
+            <th>Minimum person amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var warmMeal in Model.WarmMeals)
+        {
+            <tr>
+                <td>@warmMeal.Ingredients</td>
+                <td>@warmMeal.InSeason</td>
+                <td>@warmMeal.MeatType</td>
+                <td>@warmMeal.Price</td>
+                <td>@warmMeal.MinPersonAmount</td>
+            </tr>
+        }
+    </tbody>
+</table>

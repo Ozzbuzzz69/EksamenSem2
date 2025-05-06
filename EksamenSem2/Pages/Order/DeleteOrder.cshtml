@@ -1,0 +1,16 @@
+﻿@page
+@model EksamenProjekt2Sem.Pages.Order.DeleteOrderModel
+@{
+}
+<h1>Delete Confirmation</h1>
+<div class="alert alert-danger">
+    <h4>Are you sure you want to delete this order?</h4>
+    <p>
+        <strong>Order Id:</strong> @Model.Order.Id
+    </p>
+    <form method="post">
+        <input type="hidden" asp-for="Order.Id" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-page="./Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

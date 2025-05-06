@@ -1,0 +1,43 @@
+﻿@page "{id:int}"
+@model EksamenProjekt2Sem.Pages.CampaignOffer.UpdateCampaignOfferModel
+@{
+}
+
+<h1>Opdater</h1>
+
+<form method="post">
+	<div class="form-group">
+		<label asp-for="CampaignOffer.Id" class="control-lable"></label>
+		<input asp-for="CampaignOffer.Id" class="form-control" readonly="@(true)" />
+	</div>
+	<div class="form-group">
+		<label asp-for="CampaignOffer.Name" class="control-lable"></label>
+		<input asp-for="CampaignOffer.Name" class="form-control" />
+		<span asp-validation-for="CampaignOffer.Name" class="text-danger"></span>
+    </div>    
+    <div class="form-group">
+        <label asp-for="CampaignOffer.ImageLink" class="control-label"></label>
+        <input asp-for="CampaignOffer.ImageLink" class="form-control" />
+        <span asp-validation-for="CampaignOffer.ImageLink" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CampaignOffer.ImageLink" class="control-label"></label>
+        <input asp-for="CampaignOffer.ImageLink" class="form-control" />
+        <span asp-validation-for="CampaignOffer.ImageLink" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CampaignOffer.Price" class="control-label"></label>
+        <input asp-for="CampaignOffer.Price" class="form-control" />
+        <span asp-validation-for="CampaignOffer.Price" class="text-danger"></span>
+    </div>
+
+    <p>
+        <div class="form-group">
+            <input type="submit" value="Update" class="btn btn-primary" />
+        </div>
+    </p>
+</form>
+
+<p>
+	<a asp-page="/CampaignOffer/ReadAllCampaignOffers">Back to List</a>
+</p>

@@ -1,0 +1,20 @@
+﻿@page
+@model EksamenProjekt2Sem.Pages.CampaignOffer.DeleteCampaignOfferModel
+@{
+}
+
+<h1>Slet</h1>
+<div class="alert alert-danger">
+    <h4>Er du sikker på du vil slette? @Model.CampaignOffer.Name</h4>
+    <p>
+        <strong>Offer Name:</strong> @Model.CampaignOffer.Name
+    </p>
+    <p>
+        <strong>Offer Description:</strong> @Model.CampaignOffer.ImageLink
+    </p>
+    <form method="post">
+        <input type="hidden" asp-for="CampaignOffer.Id" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-page="./Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

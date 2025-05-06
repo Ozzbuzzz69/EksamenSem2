@@ -1,0 +1,14 @@
+﻿@page
+@model EksamenProjekt2Sem.Pages.Food.Sandwich.DeleteSandwichModel
+@{
+}
+
+<h1>Slet</h1>
+
+<div class="alert alert-danger">
+    <h5>Er du sikker på du vil slette @Model.Sandwich.Ingredients</h5>
+</div>
+<form method="post">
+    <button type="submit" class="btn btn-danger">Ja</button>
+    <a class="btn btn-primary" asp-page="/Food/Sandwich/ReadAllSandwiches">Nej</a>
+</form>
