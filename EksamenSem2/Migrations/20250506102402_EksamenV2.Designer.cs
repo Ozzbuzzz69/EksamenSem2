@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EksamenSem2.Migrations
 {
     [DbContext(typeof(FoodContext))]
-    [Migration("20250506094321_EksamenSem2")]
-    partial class EksamenSem2
+    [Migration("20250506102402_EksamenV2")]
+    partial class EksamenV2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -79,7 +79,7 @@ namespace EksamenSem2.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Foods");
+                    b.ToTable("Food");
 
                     b.HasDiscriminator().HasValue("Food");
 
