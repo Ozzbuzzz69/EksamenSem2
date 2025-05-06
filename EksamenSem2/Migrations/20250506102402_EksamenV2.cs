@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace EksamenSem2.Migrations
 {
     /// <inheritdoc />
-    public partial class EksamenSem2 : Migration
+    public partial class EksamenV2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -27,7 +27,7 @@ namespace EksamenSem2.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Foods",
+                name: "Food",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -42,7 +42,7 @@ namespace EksamenSem2.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Foods", x => x.Id);
+                    table.PrimaryKey("PK_Food", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -104,9 +104,9 @@ namespace EksamenSem2.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_OrderLines_Foods_FoodId",
+                        name: "FK_OrderLines_Food_FoodId",
                         column: x => x.FoodId,
-                        principalTable: "Foods",
+                        principalTable: "Food",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -147,7 +147,7 @@ namespace EksamenSem2.Migrations
                 name: "CampaignOffers");
 
             migrationBuilder.DropTable(
-                name: "Foods");
+                name: "Food");
 
             migrationBuilder.DropTable(
                 name: "Orders");

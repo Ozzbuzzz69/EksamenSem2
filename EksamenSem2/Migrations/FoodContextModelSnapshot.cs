@@ -76,7 +76,7 @@ namespace EksamenSem2.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Foods");
+                    b.ToTable("Food");
 
                     b.HasDiscriminator().HasValue("Food");
 
