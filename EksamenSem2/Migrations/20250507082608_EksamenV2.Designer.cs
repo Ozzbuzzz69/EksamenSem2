@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EksamenSem2.Migrations
 {
     [DbContext(typeof(FoodContext))]
-    [Migration("20250506102402_EksamenV2")]
+    [Migration("20250507082608_EksamenV2")]
     partial class EksamenV2
     {
         /// <inheritdoc />
@@ -141,7 +141,7 @@ namespace EksamenSem2.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("OrderLines");
+                    b.ToTable("OrderLine");
                 });
 
             modelBuilder.Entity("EksamenProjekt2Sem.Models.User", b =>

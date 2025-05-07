@@ -15,16 +15,21 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var campaignOffer in Model.CampaignOffers)
-        {
-            <tr>
-                <td>@campaignOffer.Name</td>
-                <td><img src="@campaignOffer.ImageLink" alt="Billede" style="width: 100px; height: auto;" /></td>
-                <td>@campaignOffer.Price</td>
-                <td>
-                    <a asp-page="./UpdateCampaignOffer" asp-route-id="@campaignOffer.Id">Rediger</a> |
-                    <a asp-page="./DeleteCampaignOffer" asp-route-id="@campaignOffer.Id">Slet</a>
-                </td>
-            </tr>
+        @{
+            if (Model.CampaignOffers != null)
+            {
+                foreach (var campaignOffer in Model.CampaignOffers)
+                {
+                    <tr>
+                        <td>@campaignOffer.Name</td>
+                        <td><img src="@campaignOffer.ImageLink" alt="Billede" style="width: 100px; height: auto;" /></td>
+                        <td>@campaignOffer.Price</td>
+                        <td>
+                            <a asp-page="./UpdateCampaignOffer" asp-route-id="@campaignOffer.Id">Rediger</a> |
+                            <a asp-page="./DeleteCampaignOffer" asp-route-id="@campaignOffer.Id">Slet</a>
+                        </td>
+                    </tr>
+                }
+            }
         }
 </table>

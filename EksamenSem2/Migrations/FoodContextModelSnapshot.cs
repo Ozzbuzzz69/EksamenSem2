@@ -138,7 +138,7 @@ namespace EksamenSem2.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("OrderLines");
+                    b.ToTable("OrderLine");
                 });
 
             modelBuilder.Entity("EksamenProjekt2Sem.Models.User", b =>

@@ -16,15 +16,20 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var warmMeal in Model.WarmMeals)
+        @{
+        if (Model.WarmMeals != null)
         {
-            <tr>
-                <td>@warmMeal.Ingredients</td>
-                <td>@warmMeal.InSeason</td>
-                <td>@warmMeal.MeatType</td>
-                <td>@warmMeal.Price</td>
-                <td>@warmMeal.MinPersonAmount</td>
-            </tr>
+                foreach (var warmMeal in Model.WarmMeals)
+                {
+                    <tr>
+                        <td>@warmMeal.Ingredients</td>
+                        <td>@warmMeal.InSeason</td>
+                        <td>@warmMeal.MeatType</td>
+                        <td>@warmMeal.Price</td>
+                        <td>@warmMeal.MinPersonAmount</td>
+                    </tr>
+                }
+        }
         }
     </tbody>
 </table>

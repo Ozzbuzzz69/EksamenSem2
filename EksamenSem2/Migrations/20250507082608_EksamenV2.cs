@@ -83,7 +83,7 @@ namespace EksamenSem2.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "OrderLines",
+                name: "OrderLine",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -96,39 +96,39 @@ namespace EksamenSem2.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OrderLines", x => x.Id);
+                    table.PrimaryKey("PK_OrderLine", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_OrderLines_CampaignOffers_CampaignOfferId",
+                        name: "FK_OrderLine_CampaignOffers_CampaignOfferId",
                         column: x => x.CampaignOfferId,
                         principalTable: "CampaignOffers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_OrderLines_Food_FoodId",
+                        name: "FK_OrderLine_Food_FoodId",
                         column: x => x.FoodId,
                         principalTable: "Food",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_OrderLines_Orders_OrderId",
+                        name: "FK_OrderLine_Orders_OrderId",
                         column: x => x.OrderId,
                         principalTable: "Orders",
                         principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrderLines_CampaignOfferId",
-                table: "OrderLines",
+                name: "IX_OrderLine_CampaignOfferId",
+                table: "OrderLine",
                 column: "CampaignOfferId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrderLines_FoodId",
-                table: "OrderLines",
+                name: "IX_OrderLine_FoodId",
+                table: "OrderLine",
                 column: "FoodId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrderLines_OrderId",
-                table: "OrderLines",
+                name: "IX_OrderLine_OrderId",
+                table: "OrderLine",
                 column: "OrderId");
 
             migrationBuilder.CreateIndex(
@@ -141,7 +141,7 @@ namespace EksamenSem2.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "OrderLines");
+                name: "OrderLine");
 
             migrationBuilder.DropTable(
                 name: "CampaignOffers");
